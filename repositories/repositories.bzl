@@ -185,8 +185,9 @@ def repositories():
     if "rules_pkg" not in excludes:
         http_archive(
             name = "rules_pkg",
-            sha256 = "aeca78988341a2ee1ba097641056d168320ecc51372ef7ff8e64b139516a4937",
-            urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.2.6-1/rules_pkg-0.2.6.tar.gz"],
+            sha256 = "d281339f68f61766b9c4871c17caed30bda36e6c8fdd5dfd254db0a82ea48e25",
+            urls = ["https://github.com/bazelbuild/rules_pkg/archive/1b031fdae52a879e3a87f8ed9b083ab99f8a32d0.tar.gz"],
+            strip_prefix = "rules_pkg-1b031fdae52a879e3a87f8ed9b083ab99f8a32d0/pkg/",
         )
 
     native.register_toolchains(
