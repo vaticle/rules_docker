@@ -23,6 +23,8 @@ exports_files(["LICENSE"])
 
 exports_files(["WORKSPACE"])
 
+exports_files(["bazelbuild_rules_pkg-allow-long-filenames.patch"])
+
 gazelle(
     name = "gazelle",
     prefix = "github.com/bazelbuild/rules_docker",

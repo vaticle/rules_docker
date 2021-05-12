@@ -185,8 +185,12 @@ def repositories():
     if "rules_pkg" not in excludes:
         http_archive(
             name = "rules_pkg",
-            sha256 = "aeca78988341a2ee1ba097641056d168320ecc51372ef7ff8e64b139516a4937",
-            urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.2.6-1/rules_pkg-0.2.6.tar.gz"],
+            sha256 = "038f1caa773a7e35b3663865ffb003169c6a71dc995e39bf4815792f385d837d",
+            urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.4.0/rules_pkg-0.4.0.tar.gz"],
+            patches = [
+                "@io_bazel_rules_docker//:bazelbuild_rules_pkg-allow-long-filenames.patch",
+            ],
+            patch_args = ["-p1"],
         )
 
     native.register_toolchains(
