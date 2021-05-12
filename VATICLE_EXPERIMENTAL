@@ -1,0 +1,9 @@
+Based-on: bazelbuild/rules_docker@v1.17.0
+Merged-in:
+- support for long filenames
+- upgrading @rules_pkg to latest master at the time: bazelbuild/rules_pkg#1b031fdae52a879e3a87f8ed9b083ab99f8a32d0
+Reset-when: 
+- bazelbuild/rules_docker#1850 is merged
+- rules_pkg cuts a release with this commit included
+- a PR to upgrade rules_pkg in rules_docker is submitted & merged
+
